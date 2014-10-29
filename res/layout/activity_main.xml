@@ -1,0 +1,115 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <com.jingchen.tbviewer.ScrollViewContainer
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <LinearLayout
+                    android:id="@+id/imagesLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical" >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/h" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/i" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/j" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/k" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/l" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/m" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_below="@id/imagesLayout"
+                    android:background="#eeeeee"
+                    android:gravity="center"
+                    android:text="继续拖动，查看更多美女"
+                    android:textSize="20sp" />
+            </RelativeLayout>
+        </ScrollView>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#000000" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/a" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/b" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/c" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/d" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/e" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/f" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/g" />
+            </LinearLayout>
+        </ScrollView>
+    </com.jingchen.tbviewer.ScrollViewContainer>
+
+</RelativeLayout>
