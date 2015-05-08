@@ -136,10 +136,16 @@ public class ScrollViewContainer extends RelativeLayout
 		switch (ev.getActionMasked())
 		{
 		case MotionEvent.ACTION_DOWN:
-			if (vt == null)
-				vt = VelocityTracker.obtain();
-			else
-				vt.clear();
+			try
+			{
+				if (vt == null)
+					vt = VelocityTracker.obtain();
+				else
+					vt.clear();
+			} catch (Exception e)
+			{
+				e.printStackTrace();
+			}
 			mLastY = ev.getY();
 			vt.addMovement(ev);
 			mEvents = 0;
@@ -220,13 +226,6 @@ public class ScrollViewContainer extends RelativeLayout
 					state = AUTO_DOWN;
 			}
 			mTimer.schedule(2);
-			try
-			{
-				vt.recycle();
-			} catch (Exception e)
-			{
-				e.printStackTrace();
-			}
 			break;
 
 		}
