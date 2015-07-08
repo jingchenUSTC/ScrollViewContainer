@@ -7,6 +7,7 @@ import android.content.Context;
 import android.os.Handler;
 import android.os.Message;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.MotionEvent;
 import android.view.VelocityTracker;
 import android.view.View;
@@ -236,17 +237,6 @@ public class ScrollViewContainer extends RelativeLayout
 	@Override
 	protected void onLayout(boolean changed, int l, int t, int r, int b)
 	{
-		topView.layout(0, (int) mMoveLen, mViewWidth,
-				topView.getMeasuredHeight() + (int) mMoveLen);
-		bottomView.layout(0, topView.getMeasuredHeight() + (int) mMoveLen,
-				mViewWidth, topView.getMeasuredHeight() + (int) mMoveLen
-						+ bottomView.getMeasuredHeight());
-	}
-
-	@Override
-	protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec)
-	{
-		super.onMeasure(widthMeasureSpec, heightMeasureSpec);
 		if (!isMeasured)
 		{
 			isMeasured = true;
@@ -260,6 +250,11 @@ public class ScrollViewContainer extends RelativeLayout
 			bottomView.setOnTouchListener(bottomViewTouchListener);
 			topView.setOnTouchListener(topViewTouchListener);
 		}
+		topView.layout(0, (int) mMoveLen, mViewWidth,
+				topView.getMeasuredHeight() + (int) mMoveLen);
+		bottomView.layout(0, topView.getMeasuredHeight() + (int) mMoveLen,
+				mViewWidth, topView.getMeasuredHeight() + (int) mMoveLen
+						+ bottomView.getMeasuredHeight());
 	}
 
 	private OnTouchListener topViewTouchListener = new OnTouchListener()
